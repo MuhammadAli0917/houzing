@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container} from "./style";
 
-function Index(props) {
+function Index() {
     return (
         <Container>Home</Container>
     );
