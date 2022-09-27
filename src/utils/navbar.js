@@ -19,4 +19,12 @@ export const navbar = [
         path: "/properties",
         element: <PropertiesPage />
     },
+    {
+        id: useId,
+        title: "Sign In",
+        hidden: true,
+        private: false,
+        path: "/signin",
+        element: <h1>Sign In Section</h1>
+    },
 ]
