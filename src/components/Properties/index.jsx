@@ -3,7 +3,7 @@ import {Container} from "./style";
 
 function Index() {
     return (
-        <Container>Properties</Container>
+        <Container>Properties Component</Container>
     );
 }
 
