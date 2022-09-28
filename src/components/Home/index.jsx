@@ -1,12 +1,14 @@
 import React from 'react';
 import {Container} from "./style";
 import GenCarousel from "../Carousel";
+import HouseCard from "../HouseCard";
 
 function Index() {
     return (
         <Container>
             <h1>Home</h1>
             <GenCarousel></GenCarousel>
+            <HouseCard></HouseCard>
         </Container>
     );
 }
