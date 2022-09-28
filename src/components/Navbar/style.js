@@ -28,11 +28,12 @@ export const Wrapper = styled.div`
 
 export const Section = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: center;
   cursor: ${({logo}) => logo && "pointer"};
 
-  h1 {
+  h3 {
     height: 16px;
+    color: #fff;
   }
   
   .active {

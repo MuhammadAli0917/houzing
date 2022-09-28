@@ -1,11 +1,12 @@
 import React from 'react';
 import {Container, Wrapper, Section, Logo, Link, Main} from "./style";
 import {Outlet, useNavigate} from "react-router-dom"
-import logoImg from "../../assets/images/logo.svg"
+import logoImg from "../../assets/img/logo.svg"
 import {navbar} from "../../utils/navbar";
 import Button from "../../Generics/Button";
+import Filter from "../Filter";
 
-function Index(props) {
+function Index() {
     const navigate = useNavigate()
     return (
         <Container>
@@ -13,7 +14,7 @@ function Index(props) {
                 <Wrapper>
                     <Section onClick={() => navigate("/home")} logo>
                         <Logo src={logoImg} />
-                        <h2>Houzing</h2>
+                        <h3>Houzing</h3>
                     </Section>
                     <Section>
                         {navbar.map(({path, title, hidden}, index) => {
@@ -25,6 +26,7 @@ function Index(props) {
                     </Section>
                 </Wrapper>
             </Main>
+            <Filter />
             <Outlet />
         </Container>
     );
