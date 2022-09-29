@@ -32,7 +32,7 @@ function GenCarousel() {
                 </Content.Desc>
                 <Content.Price>5,250 / month</Content.Price>
             </Content>
-            <Arrow onClick={onMove} data-name="left" left></Arrow>
+            <Arrow onClick={onMove} data-name="left" left="true"></Arrow>
             <Arrow onClick={onMove} data-name="right"></Arrow>
         </Container>
     );

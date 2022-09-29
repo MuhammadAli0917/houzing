@@ -1,14 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container} from "./style";
-import {Input} from "../../Generics";
+import HouseCard from "../HouseCard";
+import {useLocation} from "react-router-dom";
+const {REACT_APP_BASE_URL: url} = process.env
 
-function Index() {
+const Properties = () => {
+    const [data, setData] = useState([])
+    const {search} = useLocation()
+    useEffect(() => {
+        fetch(`${url}/houses/list${search}`)
+            .then(res => res.json())
+            .then(res => setData(res?.data || []))
+    }, [search])
+    console.log(data)
     return (
         <Container>
-            <h1>Properties Component</h1>
-            <Input width="20px" placeholder="Enter your name"></Input>
+            {data.map(value => {
+                return <HouseCard key={value.id} data={value} />
+            })}
         </Container>
     );
 }
 
-export default Index;
+export default Properties;

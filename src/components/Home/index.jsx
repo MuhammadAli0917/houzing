@@ -6,9 +6,8 @@ import HouseCard from "../HouseCard";
 function Index() {
     return (
         <Container>
-            <h1>Home</h1>
             <GenCarousel></GenCarousel>
-            <HouseCard></HouseCard>
+            {/*<HouseCard></HouseCard>*/}
         </Container>
     );
 }
